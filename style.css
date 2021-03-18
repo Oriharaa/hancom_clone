@@ -92,6 +92,11 @@ img {
   width: 100%;
 }
 
+.twoDev__container > .wid > dd {
+  padding: 0 20px;
+  font-weight: bold;
+}
+
 .twoDev__container > dl > dt {
   padding-bottom: 10px;
   font-size: 21px;
@@ -190,13 +195,19 @@ img {
   font-size: 20px;
 }
 
+.toggle-btn{
+  display:none;
+}
+
+
+
 /* Visual */
 #visual {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: 100vh;
   background-color: black;
   color: #fff;
 }
@@ -301,24 +312,55 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   color: #222;
+  transition: all 0.3s;
+}
+
+.sticker > ul > li > a:hover {
+  background-position: center 30px;
+  transition: all 0.3s;
+  color: #814997;
 }
 
 .sticker > ul > li > .one {
+  color: #0e4194;
   background-image: url("images/info/business_icon01.png");
 }
 .sticker > ul > li > .two {
-  background-image: url("images/info/business_icon02.png");
+  color: #814997;
+  background-image: url("images/info/business_icon02_up.png");
 }
 .sticker > ul > li > .three {
-  background-image: url("images/info/business_icon03.png");
+  color: #009ede;
+  background-image: url("images/info/business_icon03_up.png");
 }
 .sticker > ul > li > .four {
-  background-image: url("images/info/business_icon04.png");
+  color: #f39324;
+  background-image: url("images/info/business_icon04_up.png");
 }
 .sticker > ul > li > .five {
-  background-image: url("images/info/business_icon05.png");
+  color: #50b747;
+  background-image: url("images/info/business_icon05_up.png");
 }
 .sticker > ul > li > .six {
+  color: #e30613;
+  background-image: url("images/info/business_icon06_up.png");
+}
+.sticker > ul > li > .one:hover {
+  background-image: url("images/info/business_icon01_up.png");
+}
+.sticker > ul > li > .two:hover {
+  background-image: url("images/info/business_icon02.png");
+}
+.sticker > ul > li > .three:hover {
+  background-image: url("images/info/business_icon03.png");
+}
+.sticker > ul > li > .four:hover {
+  background-image: url("images/info/business_icon04.png");
+}
+.sticker > ul > li > .five:hover {
+  background-image: url("images/info/business_icon05.png");
+}
+.sticker > ul > li > .six:hover {
   background-image: url("images/info/business_icon06.png");
 }
 
@@ -376,6 +418,34 @@ img {
   height: 25px;
   padding-left: 100px;
   margin-bottom: 120px;
+}
+
+.business__box {
+  height: 540px;
+}
+
+.business__img div {
+  background-repeat: no-repeat;
+  height: 540px;
+}
+
+.business__img .one {
+  background-image: url("images/business/blockchain_img.jpg");
+}
+.business__img .two {
+  background-image: url("/images/business/authentication_img.jpg");
+}
+.business__img .three {
+  background-image: url("/images/business/secure_img.jpg");
+}
+.business__img .four {
+  background-image: url("/images/business/forensics_img.jpg");
+}
+.business__img .five {
+  background-image: url("/images/business/vr_img.jpg");
+}
+.business__img .six {
+  background-image: url("/images/business/academy_img.jpg");
 }
 
 /* Cs */
@@ -534,4 +604,188 @@ img {
 .sitemap__container .two dd {
   display: inline-block;
   width: 49%;
+}
+
+@media screen and (max-width: 1300px) {
+  .business__box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .business__des.left,
+  .business__des.right {
+    order: 2;
+  }
+  .business__img.left,
+  .business__img.right {
+    order: 1;
+  }
+
+  .business__img,
+  .business__des {
+    width: 100%;
+  }
+
+  .business__img div {
+    height: 540px;
+  }
+
+
+@media screen and (max-width: 1200px) {
+  .business__img div {
+    background-position: center;
+    background-size: contain;
+  }
+
+  .header__container{
+    width:95%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #nav{
+    display:none;
+  }
+
+  .toggle-btn{
+    display:block;
+  }
+
+  .visual__txt h2 {
+    font-size: 50px;
+  }
+
+  .visual__txt .txt {
+    font-size: 15px;
+  }
+
+  .visual__txt p {
+    font-size: 21px;
+  }
+
+  .sticker > ul > li {
+    width: 20%;
+  }
+
+  #info {
+    padding: 60px 0;
+  }
+
+  .info__container h3 {
+    font-size: 26px;
+  }
+
+  .info__container p {
+    font-size: 15px;
+  }
+
+  .business__des span {
+    margin-top: 0px;
+    font-size: 18px;
+  }
+  .business__des span,
+  .business__des p,
+  .business__des a {
+    padding: 0 10px;
+  }
+
+  .business__des a{
+    margin-bottom:10px;
+  }
+
+  .business__des h3 {
+    padding: 15px 0 45px 10px;
+    font-size: 38px;
+  }
+
+  .business__des p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #header{
+    height:80px;
+  }
+
+  .header__logo img{
+    width:120px;
+  }
+
+  .until > ul > li{
+    font-size:14px;
+  }
+
+  .until > button{
+    font-size:18px;
+  }
+
+  .malang{
+    width:45px;
+  }
+
+  #visual {
+    height: 450px;
+  }
+
+  .visual__container {
+    padding-top: 120px;
+  }
+
+  .visual__txt h2 {
+    font-size: 40px;
+  }
+
+  .visual__txt p {
+    font-size: 17px;
+  }
+
+  .scrollDown {
+    display: none;
+  }
+
+  .sticker > ul > li {
+    padding: 0px 15px;
+  }
+
+  .sticker > ul > li > a {
+    background-size: 50px;
+    font-size: 13px;
+  }
+
+  .info__container h3 {
+    font-size: 20px;
+  }
+
+  .info__container p {
+    padding: 15px 0;
+    font-size: 13px;
+  }
+
+  .info__container p br {
+    display: none;
+  }
+
+  .business__img div {
+    height: 400px;
+  }
+
+  .business__des span {
+    font-size: 15px;
+  }
+
+  .business__des h3 {
+    padding: 15px 0 25px 10px;
+    font-size: 28px;
+  }
+
+  .business__des p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .business__img div {
+    height: 300px;
+  }
 }
