@@ -461,22 +461,22 @@ img {
 }
 
 .business__img .one {
-  background-image: url("images/business/blockchain_img.jpg");
+  background-image: url("./images/business/blockchain_img.jpg");
 }
 .business__img .two {
-  background-image: url("/images/business/authentication_img.jpg");
+  background-image: url("./images/business/authentication_img.jpg");
 }
 .business__img .three {
   background-image: url("/images/business/secure_img.jpg");
 }
 .business__img .four {
-  background-image: url("/images/business/forensics_img.jpg");
+  background-image: url("./images/business/forensics_img.jpg");
 }
 .business__img .five {
-  background-image: url("/images/business/vr_img.jpg");
+  background-image: url("./images/business/vr_img.jpg");
 }
 .business__img .six {
-  background-image: url("/images/business/academy_img.jpg");
+  background-image: url("./images/business/academy_img.jpg");
 }
 
 @keyframes fade-in {
