@@ -1,4 +1,5 @@
 'use strict';
+const body = document.querySelector('body');
 
 const oneDev = document.querySelector('.oneDev');
 const twoDev = document.querySelectorAll('.twoDev');
@@ -11,18 +12,83 @@ const lang = document.querySelector('.lang');
 const kor = document.querySelector('.kor');
 const eng = document.querySelector('.eng');
 
-lang.addEventListener('click', (event)=> {
-  const target = event.target
-  if(target.className === 'eng'){
-    eng.classList.add('on');
-    kor.classList.remove('on');
-  }else if(target.className === 'kor'){
-    kor.classList.add('on');
-    eng.classList.remove('on');
-  }
-});
+const toggleBtn = document.querySelector('.toggle-btn');
+const menuArea = document.querySelector('#menuArea');
+const xBtn = document.querySelector('.x-btn');
+
+const menuList = document.querySelector('.menu__list');
+
+const infoContainer = document.querySelector('.info__container');
+
+const businessBox = document.querySelectorAll('.business__box');
+const businessDes = document.querySelectorAll('.business__des');
+const businessImg = document.querySelectorAll('.business__img');
+const businessSpan = document.querySelectorAll('.business__des span')
+const winHeight = window.innerHeight;
+const winHalfHeight = window.innerHeight - 250;
 
 let clickBoolean = false;
+
+window.addEventListener('scroll', ()=>{
+  showBusiness();
+  showInfo();
+});
+
+function showBusiness(){
+  for(let i=0; i <businessImg.length; i++){
+    const clientTop = businessImg[i].getBoundingClientRect().top;
+    if(winHalfHeight > clientTop){
+      businessAddFade(i);
+    }else if(winHeight < clientTop){
+      businessRemoveFade(i);
+    }
+  }
+}
+
+function businessAddFade(i){
+  businessImg[i].classList.add("fade-in");
+  businessDes[i].classList.add("fade-in");
+  businessSpan[i].classList.add("fade-down");
+};
+
+function businessRemoveFade(i){
+  businessImg[i].classList.remove("fade-in");  
+  businessDes[i].classList.remove("fade-in");
+  businessSpan[i].classList.remove("fade-down");
+}
+
+function showInfo(){
+  const clientTop = infoContainer.getBoundingClientRect().top;
+  if(winHalfHeight > clientTop){
+    infoAddFade();
+  }else if(winHeight < clientTop){
+    infoRemoveFade();
+  }
+}
+
+function infoAddFade(){
+  infoContainer.classList.add('fade-down');
+};
+
+function infoRemoveFade(){
+  infoContainer.classList.remove('fade-down');
+}
+
+
+
+
+toggleBtn.addEventListener('click', ()=>{
+  toggleMenu();
+});
+
+xBtn.addEventListener('click', ()=>{
+  toggleMenu();
+});
+
+
+lang.addEventListener('click', (event)=> {
+  stylingLang(event);
+});
 
 searchIcon.addEventListener('click', ()=>{
   if(clickBoolean === true){
@@ -88,4 +154,26 @@ function hideTwoDev(number) {
   }
 };
 
+
+function stylingLang(){
+  const target = event.target
+  if(target.className === 'eng'){
+    eng.classList.add('on');
+    kor.classList.remove('on');
+  }else if(target.className === 'kor'){
+    kor.classList.add('on');
+    eng.classList.remove('on');
+  }
+}
+
+function toggleMenu(){
+  const open = menuArea.classList.contains('open');
+  if(open){
+    body.style.overflow = 'visible'
+  }else{
+  body.style.overflow = 'hidden'
+  }
+  menuArea.classList.toggle('open');
+  menuList.classList.toggle('open');
+}
 
