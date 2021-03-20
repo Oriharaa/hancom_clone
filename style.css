@@ -753,7 +753,7 @@ img {
 }
 
 .footer__info {
-  padding: 0 15px;
+  margin-left: 80px;
 }
 
 .footer__info dd span {
@@ -761,7 +761,6 @@ img {
   color: #888;
   font-size: 15px;
   line-height: 1.8em;
-  letter-spacing: -1.2px;
 }
 
 .footer__info dt {
@@ -782,7 +781,7 @@ img {
   flex-direction: column;
   align-items: flex-end;
   top: 68px;
-  right: -50px;
+  right: 0;
 }
 
 .familyLine a {
@@ -876,7 +875,8 @@ img {
     background-size: contain;
   }
 
-  .header__container {
+  .header__container,
+  .footer__container {
     width: 95%;
   }
 }
@@ -981,6 +981,35 @@ img {
   #sitemap {
     display: none;
   }
+
+  .footer__container {
+    flex-direction: column;
+    border-top: 1px solid #e1e1e1;
+  }
+
+  .footer__logo a {
+    position: absolute;
+    top: 42px;
+    right: 0;
+  }
+
+  .footer__info {
+    padding: 20px 0 80px 0;
+  }
+
+  .footer__until {
+    position: static;
+  }
+
+  .familyLine {
+    position: absolute;
+    right: 0;
+  }
+
+  .sns {
+    position: absolute;
+    left: 0;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -1062,10 +1091,32 @@ img {
   .business__des p {
     font-size: 14px;
   }
+
+  .footer__info dd span {
+    font-size: 12px;
+  }
+
+  .footer__info dt {
+    font-size: 12px;
+  }
+
+  .footer__info dd br {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 580px) {
   .business__img div {
     height: 300px;
+  }
+
+  .familyLine {
+    bottom: -55%;
+    right: 25%;
+  }
+
+  .sns {
+    bottom: -25%;
+    left: 25%;
   }
 }
