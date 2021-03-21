@@ -271,6 +271,10 @@ img {
   }
 }
 
+#contents {
+  width: 100%;
+}
+
 /* Info */
 #info {
   padding: 160px 0;
@@ -491,16 +495,17 @@ img {
 @keyframes fade-down {
   from {
     opacity: 0;
-    margin-top: 30px;
+    margin-top: 0px;
   }
   to {
     opacity: 1;
-    margin-top: 90px;
+    margin-top: 40px;
   }
 }
 
 /* Cs */
 #cs {
+  width: 100%;
   padding: 160px 0;
 }
 
@@ -734,6 +739,10 @@ img {
   font-size: 13px;
 }
 
+#footer {
+  width: 100%;
+}
+
 .footer__container {
   position: relative;
   display: flex;
@@ -784,7 +793,11 @@ img {
   right: 0;
 }
 
-.familyLine a {
+.familyLine {
+  display: none;
+}
+
+.familyLine > a {
   display: block;
   width: 220px;
   height: 45px;
@@ -1106,17 +1119,128 @@ img {
 }
 
 @media screen and (max-width: 580px) {
+  .visual__container {
+    width: 90%;
+  }
+
   .business__img div {
     height: 300px;
   }
 
+  .footer__info {
+    margin-left: 0;
+  }
+
+  .footer__container {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header__container {
+    justify-content: flex-start;
+  }
+
+  .info__container {
+    width: 90%;
+  }
+
+  .info__container h3 {
+    font-size: 19px;
+  }
+
+  .info__container h3 span {
+    display: inline;
+  }
+  .info__container h3 br {
+    display: none;
+  }
+
+  .business__container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #cs {
+    padding: 40px 0;
+  }
+
+  #cs .case,
+  #cs .contact {
+    margin: 0;
+  }
+
+  .case__title,
+  .contact__title {
+    font-size: 21px;
+  }
+
+  .case__txt,
+  .contact__txt {
+    font-size: 15px;
+  }
+
+  .case__title::before,
+  .contact__title::before {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .footer__info {
+    padding: 20px 0;
+  }
+
+  .footer__logo {
+    position: relative;
+  }
+
+  .footer__logo a {
+    top: 25%;
+  }
+
+  .footer__logo a.privacy {
+    right: -60%;
+    top: 55%;
+  }
+
   .familyLine {
-    bottom: -55%;
-    right: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .familyLine a {
+    position: relative;
+    width: 180px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .familyLine a::after {
+    top: 15px;
+    right: -10px;
   }
 
   .sns {
-    bottom: -25%;
-    left: 25%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sns a {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__logo img {
+    width: 100px;
+  }
+
+  .footer__logo a {
+    top: 32%;
   }
 }
