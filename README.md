@@ -18,6 +18,7 @@ UI설계에 대한 능력이 조금 부족하다고 느껴 html과 css, js만으
 1. [Project Purpose](#Project-Purpose)
 2. [Development Stack](#Development-Stack)
 3. [Project View](#Project-View)
+4. [Finishing the Project](#Finishing-the-Project)
 
 <br/>
 <br/>
@@ -53,3 +54,13 @@ UI설계에 대한 능력이 조금 부족하다고 느껴 html과 css, js만으
 ![hancomwithMobile](https://user-images.githubusercontent.com/60921094/111914050-d73fe500-8ab3-11eb-9d9a-09884674134c.JPG)
 
 <br/>
+
+### Finishing the Project
+
+- 제 스스로의 창작이 아닌 이미 완성되어있는 기업사이트의 클론코딩을 하였지만
+  <br/>
+  마크업을 시맨틱하고 조금 더 구조화시키는 능력을 향상시킬수있었던것같습니다.
+  <br/>
+  또한 드롭다운메뉴와 fade-in효과를 구현해보고 다른 프로젝트에서는 어떻게 활용시킬 수 있을지
+  <br/>
+  생각하게되는 시간도 가지게된것같습니다.
