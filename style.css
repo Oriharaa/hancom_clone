@@ -471,7 +471,7 @@ img {
   background-image: url("./images/business/authentication_img.jpg");
 }
 .business__img .three {
-  background-image: url("/images/business/secure_img.jpg");
+  background-image: url("./images/business/secure_img.jpg");
 }
 .business__img .four {
   background-image: url("./images/business/forensics_img.jpg");
