@@ -53,9 +53,11 @@ UI설계에 대한 능력이 조금 부족하다고 느껴 html과 css, js만으
 
 ![hancomwithMobile](https://user-images.githubusercontent.com/60921094/111914050-d73fe500-8ab3-11eb-9d9a-09884674134c.JPG)
 
-<br/>
+---
 
 ### Finishing the Project
+
+---
 
 - 제 스스로의 창작이 아닌 이미 완성되어있는 기업사이트의 클론코딩을 하였지만
   <br/>
