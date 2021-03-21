@@ -41,6 +41,10 @@ img {
   margin: 0 auto;
 }
 
+.header__logo {
+  cursor: pointer;
+}
+
 #nav,
 #nav > ul,
 #nav > ul > li,
