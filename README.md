@@ -9,7 +9,7 @@ UI설계에 대한 능력이 조금 부족하다고 느껴 html과 css, js만으
 <br/>
 좀 더 시맨틱하게 퍼블리싱 해보자 하여 한컴위드 사이트를 클론 코딩하였습니다.
 
-👁 [URL 바로가기](https://oriharaa.github.io/hancom_clone/)
+👁 [URL 바로가기](https://cherryc0ck.github.io/hancom_clone/)
 <br/>
 <br/>
 
